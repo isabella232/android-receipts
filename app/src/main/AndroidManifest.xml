@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="tech.receipts">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="tech.receipts.TicketsLotteryApp"
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activity.ResultsActivity"
+            android:label="@string/title_section_results"
+            android:parentActivityName=".ui.activity.MainActivity">
+
+            <!-- Parent activity meta-data to support API level 7+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.MainActivity" />
+
+        </activity>
+        <activity
+            android:name=".ui.activity.OptionsActivity"
+            android:label="@string/title_section_options"
+            android:parentActivityName=".ui.activity.MainActivity">
+
+            <!-- Parent activity meta-data to support API level 7+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.MainActivity" />
+
+        </activity>
+        <activity
+            android:name=".ui.activity.TicketsActivity"
+            android:label="@string/title_section_tickets_list"
+            android:parentActivityName=".ui.activity.MainActivity">
+
+            <!-- Parent activity meta-data to support API level 7+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.MainActivity" />
+
+        </activity>
+        <activity
+            android:name=".ui.activity.AboutActivity"
+            android:label="@string/title_section_about"
+            android:parentActivityName=".ui.activity.MainActivity">
+
+            <!-- Parent activity meta-data to support API level 7+ -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.MainActivity" />
+
+        </activity>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="3a5720c6a83a90a26a5c16acfc61b6e6d0a3e423" />
+
+    </application>
+
+</manifest>
